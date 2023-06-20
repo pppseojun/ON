@@ -9,7 +9,7 @@ select {
   background-color: gray;
 }
 .menu {
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   height: 100%;
@@ -106,4 +106,33 @@ footer {
 #scroll-to-top img {
   width: 20px; /* Adjust the width to your desired size */
   height: auto; /* Automatically adjust the height based on the width */
+}
+.menu>ul, li{
+  list-style-type: none;
+}
+
+a{
+  color: inherit;
+  text-decoration: none;
+}
+
+.menu_footer{
+  color:black;
+}
+ul{
+  font-size: 25px;
+}
+ul ul {
+  font-size: 18px;
+}
+ul ul{
+  display: none;
+}
+ul>li:hover>ul{
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 100%;
+  width: 100%;
+  /* 메뉴바 2차 메뉴 나오게 하기 hover 사용이지만 객체 선택에서 문제 발생하는것 같음 태깅 제대로 해서 해보기*/
 }
