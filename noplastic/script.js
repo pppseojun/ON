@@ -14,10 +14,3 @@ document.getElementById("scroll-to-top").addEventListener("click", function() {
     behavior: "smooth"
   });
 });
-
-var gnb = document.querySelectorAll('#com');
-var submenu = document.querySelectorAll('#sub_menu');
-
-gnb.addEventListener('click', function() {
-  submenu.style.display = (submenu.style.display === 'none') ? 'block' : 'none';
-});
