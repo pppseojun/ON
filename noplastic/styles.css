@@ -1,3 +1,13 @@
+#header .logo{
+  left: 25px;
+  position: absolute;
+  top: 0;
+  z-index: 1000;
+}
+
+#header>.logo>a{
+  background: url(images/tlogo.png) no-repeat center top;
+}
 
 body {
   margin: 0;
@@ -6,50 +16,30 @@ body {
   flex-direction: column;
   min-height: 100vh;
 }
-header{
-  background-image: url('https://www.greenwhaleglobal.com/asset/images/sub/sub_img1.jpg');
-  background-size : cover;
-  padding: 20px;
-  width: 100%;
-  box-sizing: border-box;
-  text-align: center;
-  margin-top: auto;
-}
-.flex-container {
-  display: flex;
-}
-
-/* 구글 번역 */
-.lang{
-  display: inline-block;
-  position: absolute;
-  z-index: 2;
-  padding: 8px 0;
-  top: 40px;
-  right: 190px;
-  user-select: none;
-  width: auto;
-  margin: 0;
-  scale: 1.8;
-}
-.lang-option {
-  padding-left: 20px; /* 이미지와 텍스트 간의 여백을 설정하기 위한 패딩 값 */
-  background-repeat: no-repeat;
-  background-position: left center; /* 이미지를 왼쪽 정렬하고 세로 중앙 정렬 */
-}
-.option-english {
-  background-image: url("https://www.greenwhaleglobal.com/asset/images/common/tlogo.png");
-}
 select {
-  background-color: gray;
+  background-color: #000000;
+  
 }
-/* 로고 */
-#logo{
-  text-align: left;
+#select_lang{
+  float: right;
+  margin-top: 50px;
+  margin-right: 230px;
 }
 
-.menu {
+#select_lang>select::before{
   position: absolute;
+  z-index: 1000;
+  src: url(https://www.greenwhaleglobal.com/asset/images/common/icon_nshopping.png);
+}
+
+#select_lang>select{
+  color: white;
+  z-index: 1000;
+  position: absolute;
+  /* margin-left: 1000px; */
+}
+.menu {
+  position: fixed;
   top: 0;
   right: 0;
   height: 100%;
@@ -64,26 +54,28 @@ select {
   display: inline-block;
   position: absolute;
   z-index: 2;
-  padding: 8px 0;
+  padding: 20px;
   top: 40px;
   right: 60px;
+  height: 27px;
   user-select: none;
-  width: auto;
+  width: 35px;
   margin: 0;
 }
 
 .burger-icon .burger-sticks {
-  background: green;
+  background: white;
   display: block;
-  height: 8px;
+  height: 3px;
   position: relative;
   transition: background .2s ease-out;
-  width: 50px;
+  width: 35px;
+  
 }
 
 .burger-icon .burger-sticks:before,
 .burger-icon .burger-sticks:after {
-  background: green;
+  background: white;
   content: '';
   display: block;
   height: 100%;
@@ -93,11 +85,11 @@ select {
 }
 
 .burger-icon .burger-sticks:before {
-  top: 20px;
+  top: 10px;
 }
 
 .burger-icon .burger-sticks:after {
-  top: -20px;
+  top: -10px;
 }
 
 .burger-check {
@@ -105,7 +97,7 @@ select {
 }
 
 .burger-check:checked~.menu {
-  max-width: 600px;
+  max-width: 500px;
 }
 
 .burger-check:checked~.burger-icon .burger-sticks {
@@ -124,35 +116,14 @@ select {
 .burger-check:checked~.burger-icon:not(.steps) .burger-sticks:after {
   top: 0;
 }
-main{
-  background-color: rgb(170, 166, 166);
-  padding: 20px;
-  width: 100%;
-  box-sizing: border-box;
-  text-align: center;
-  margin-top: auto;
-}
-content{
-
-  padding: 20px;
-  width: 100%;
-  box-sizing: border-box;
-  text-align: center;
-  margin-top: auto;
-}
-
-
 footer {
   background-color: #333;
-  color: gray;
+  color: #fff;
   padding: 20px;
   width: 100%;
   box-sizing: border-box;
   text-align: center;
   margin-top: auto;
-}
-.sns img:hover {
-  transform: scale(1.2);
 }
 #scroll-to-top {
   display: none;
@@ -167,4 +138,67 @@ footer {
 #scroll-to-top img {
   width: 20px; /* Adjust the width to your desired size */
   height: auto; /* Automatically adjust the height based on the width */
+}
+.menu>ul, li{
+  list-style-type: none;
+  color: white;
+}
+
+.menu{
+  background-color: black;
+}
+.menu_footer>p{
+  color: white;
+}
+
+a{
+  color: inherit;
+  text-decoration: none;
+}
+
+.menu_footer{
+  color:black;
+}
+ul{
+  font-size: 25px;
+}
+ul ul {
+  font-size: 18px;
+  /*display: none;*/
+}
+#gnb>li::after{
+  margin-left: 50px;
+  content: url(images/icon_gnb_arr.png);
+}
+.main_design, #select_lang{
+  background-color: lightgreen;
+}
+
+video{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: 0;
+  transform: translateX(-50%) translateY(-50%);
+  background-size: cover;
+  transition: 1s opacity;
+}
+
+.lang{
+  position: relative;
+  z-index: 100;
+}
+
+.main_backgrand_1{
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  height: 1700px;
+  z-index: 5;
+  margin-top: -200px;
+  overflow: hidden;
 }
