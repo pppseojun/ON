@@ -14,7 +14,12 @@ body {
   padding: 0;
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  height: 100%;
+  min-height: 100%;
+}
+#body-wrapper {
+  min-height: 100%;
+  position: relative;
 }
 select {
   background-color: #000000;
@@ -34,7 +39,6 @@ select {
 
 #select_lang>select{
   color: white;
-  z-index: 1000;
   position: absolute;
   /* margin-left: 1000px; */
 }
@@ -116,15 +120,6 @@ select {
 .burger-check:checked~.burger-icon:not(.steps) .burger-sticks:after {
   top: 0;
 }
-footer {
-  background-color: #333;
-  color: #fff;
-  padding: 20px;
-  width: 100%;
-  box-sizing: border-box;
-  text-align: center;
-  margin-top: auto;
-}
 #scroll-to-top {
   display: none;
   position: fixed;
@@ -201,4 +196,20 @@ video{
   z-index: 5;
   margin-top: -200px;
   overflow: hidden;
+}
+
+footer {
+  z-index: 1000;
+  position: absolute;
+  bottom: 0;
+  background-color: #333;
+  color: gray;
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+  margin-top: auto;
+}
+.sns img:hover {
+  transform: scale(1.2);
 }
