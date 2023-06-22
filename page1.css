@@ -1,3 +1,4 @@
+
 body {
   margin: 0;
   padding: 0;
@@ -5,9 +6,48 @@ body {
   flex-direction: column;
   min-height: 100vh;
 }
+header{
+  background-image: url('https://www.greenwhaleglobal.com/asset/images/sub/sub_img1.jpg');
+  background-size : cover;
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+  margin-top: auto;
+}
+.flex-container {
+  display: flex;
+}
+
+/* 구글 번역 */
+.lang{
+  display: inline-block;
+  position: absolute;
+  z-index: 2;
+  padding: 8px 0;
+  top: 40px;
+  right: 190px;
+  user-select: none;
+  width: auto;
+  margin: 0;
+  scale: 1.8;
+}
+.lang-option {
+  padding-left: 20px; /* 이미지와 텍스트 간의 여백을 설정하기 위한 패딩 값 */
+  background-repeat: no-repeat;
+  background-position: left center; /* 이미지를 왼쪽 정렬하고 세로 중앙 정렬 */
+}
+.option-english {
+  background-image: url("https://www.greenwhaleglobal.com/asset/images/common/tlogo.png");
+}
 select {
   background-color: gray;
 }
+/* 로고 */
+#logo{
+  text-align: left;
+}
+
 .menu {
   position: absolute;
   top: 0;
@@ -25,25 +65,25 @@ select {
   position: absolute;
   z-index: 2;
   padding: 8px 0;
-  top: 4px;
-  right: 4px;
+  top: 40px;
+  right: 60px;
   user-select: none;
   width: auto;
   margin: 0;
 }
 
 .burger-icon .burger-sticks {
-  background: #333;
+  background: green;
   display: block;
-  height: 2px;
+  height: 8px;
   position: relative;
   transition: background .2s ease-out;
-  width: 18px;
+  width: 50px;
 }
 
 .burger-icon .burger-sticks:before,
 .burger-icon .burger-sticks:after {
-  background: #333;
+  background: green;
   content: '';
   display: block;
   height: 100%;
@@ -53,11 +93,11 @@ select {
 }
 
 .burger-icon .burger-sticks:before {
-  top: 5px;
+  top: 20px;
 }
 
 .burger-icon .burger-sticks:after {
-  top: -5px;
+  top: -20px;
 }
 
 .burger-check {
@@ -65,7 +105,7 @@ select {
 }
 
 .burger-check:checked~.menu {
-  max-width: 200px;
+  max-width: 600px;
 }
 
 .burger-check:checked~.burger-icon .burger-sticks {
@@ -84,14 +124,35 @@ select {
 .burger-check:checked~.burger-icon:not(.steps) .burger-sticks:after {
   top: 0;
 }
-footer {
-  background-color: #333;
-  color: #fff;
+main{
+  background-color: rgb(170, 166, 166);
   padding: 20px;
   width: 100%;
   box-sizing: border-box;
   text-align: center;
   margin-top: auto;
+}
+content{
+
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+  margin-top: auto;
+}
+
+
+footer {
+  background-color: #333;
+  color: gray;
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+  margin-top: auto;
+}
+.sns img:hover {
+  transform: scale(1.2);
 }
 #scroll-to-top {
   display: none;
