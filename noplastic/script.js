@@ -14,3 +14,21 @@ document.getElementById("scroll-to-top").addEventListener("click", function() {
     behavior: "smooth"
   });
 });
+// 구글 번역 api
+
+function translateText() {
+  var sourceText = document.getElementById("source-text").innerText;
+
+  // Send translation request to the server
+  $.ajax({
+    url: "/translate",
+    type: "GET",
+    data: { text: sourceText },
+    success: function(response) {
+      document.getElementById("translation-result").textContent = response.translation;
+    },
+    error: function(error) {
+      console.log(error);
+    }
+  });
+}
