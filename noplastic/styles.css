@@ -1,3 +1,14 @@
+#header .logo{
+  left: 25px;
+  position: absolute;
+  top: 0;
+  z-index: 1000;
+}
+
+#header>.logo>a{
+  background: url(images/tlogo.png) no-repeat center top;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -6,7 +17,26 @@ body {
   min-height: 100vh;
 }
 select {
-  background-color: gray;
+  background-color: #000000;
+  
+}
+#select_lang{
+  float: right;
+  margin-top: 50px;
+  margin-right: 230px;
+}
+
+#select_lang>select::before{
+  position: absolute;
+  z-index: 1000;
+  src: url(https://www.greenwhaleglobal.com/asset/images/common/icon_nshopping.png);
+}
+
+#select_lang>select{
+  color: white;
+  z-index: 1000;
+  position: absolute;
+  /* margin-left: 1000px; */
 }
 .menu {
   position: fixed;
@@ -24,26 +54,28 @@ select {
   display: inline-block;
   position: absolute;
   z-index: 2;
-  padding: 8px 0;
-  top: 4px;
-  right: 4px;
+  padding: 20px;
+  top: 40px;
+  right: 60px;
+  height: 27px;
   user-select: none;
-  width: auto;
+  width: 35px;
   margin: 0;
 }
 
 .burger-icon .burger-sticks {
-  background: #333;
+  background: white;
   display: block;
-  height: 2px;
+  height: 3px;
   position: relative;
   transition: background .2s ease-out;
-  width: 18px;
+  width: 35px;
+  
 }
 
 .burger-icon .burger-sticks:before,
 .burger-icon .burger-sticks:after {
-  background: #333;
+  background: white;
   content: '';
   display: block;
   height: 100%;
@@ -53,11 +85,11 @@ select {
 }
 
 .burger-icon .burger-sticks:before {
-  top: 5px;
+  top: 10px;
 }
 
 .burger-icon .burger-sticks:after {
-  top: -5px;
+  top: -10px;
 }
 
 .burger-check {
@@ -143,11 +175,30 @@ ul ul {
 }
 
 video{
-  max-width: 100%;
-  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: 0;
+  transform: translateX(-50%) translateY(-50%);
+  background-size: cover;
+  transition: 1s opacity;
 }
 
-.main_wave{
-  height: 100%;
-  width: auto;
+.lang{
+  position: relative;
+  z-index: 100;
+}
+
+.main_backgrand_1{
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  height: 1700px;
+  z-index: 5;
+  margin-top: -200px;
+  overflow: hidden;
 }
