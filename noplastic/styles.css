@@ -141,3 +141,13 @@ ul ul {
 .main_design, #select_lang{
   background-color: lightgreen;
 }
+
+video{
+  max-width: 100%;
+  display: block;
+}
+
+.main_wave{
+  height: 100%;
+  width: auto;
+}
