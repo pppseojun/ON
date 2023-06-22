@@ -1,0 +1,207 @@
+#header .logo{
+  left: 25px;
+  position: absolute;
+  top: 0;
+  z-index: 1000;
+}
+
+#header>.logo>a{
+  background: url(images/tlogo.png) no-repeat center top;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+header{
+  background-color: rgb(170, 166, 166);
+}
+select {
+  background-color: #000000;
+  
+}
+#select_lang{
+  float: right;
+  margin-top: 50px;
+  margin-right: 230px;
+}
+
+#select_lang>select::before{
+  position: absolute;
+  z-index: 1000;
+  src: url(https://www.greenwhaleglobal.com/asset/images/common/icon_nshopping.png);
+}
+
+#select_lang>select{
+  color: white;
+  z-index: 1000;
+  position: absolute;
+  /* margin-left: 1000px; */
+}
+.menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  max-width: 0;
+  transition: 0.5s ease;
+  z-index: 1;
+  background-color: #eee;
+}
+
+.burger-icon {
+  cursor: pointer;
+  display: inline-block;
+  position: absolute;
+  z-index: 2;
+  padding: 20px;
+  top: 40px;
+  right: 60px;
+  height: 27px;
+  user-select: none;
+  width: 35px;
+  margin: 0;
+}
+
+.burger-icon .burger-sticks {
+  background: white;
+  display: block;
+  height: 3px;
+  position: relative;
+  transition: background .2s ease-out;
+  width: 35px;
+  
+}
+
+.burger-icon .burger-sticks:before,
+.burger-icon .burger-sticks:after {
+  background: white;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  width: 100%;
+}
+
+.burger-icon .burger-sticks:before {
+  top: 10px;
+}
+
+.burger-icon .burger-sticks:after {
+  top: -10px;
+}
+
+.burger-check {
+  display: none;
+}
+
+.burger-check:checked~.menu {
+  max-width: 500px;
+}
+
+.burger-check:checked~.burger-icon .burger-sticks {
+  background: transparent;
+}
+
+.burger-check:checked~.burger-icon .burger-sticks:before {
+  transform: rotate(-45deg);
+}
+
+.burger-check:checked~.burger-icon .burger-sticks:after {
+  transform: rotate(45deg);
+}
+
+.burger-check:checked~.burger-icon:not(.steps) .burger-sticks:before,
+.burger-check:checked~.burger-icon:not(.steps) .burger-sticks:after {
+  top: 0;
+}
+footer {
+  background-color: #333;
+  color: gray;
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+  margin-top: auto;
+}
+#scroll-to-top {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px;
+  background-color: #333;
+  color: #fff;
+  cursor: pointer;
+}
+#scroll-to-top img {
+  width: 20px; /* Adjust the width to your desired size */
+  height: auto; /* Automatically adjust the height based on the width */
+}
+.menu>ul, li{
+  list-style-type: none;
+  color: white;
+}
+
+.menu{
+  background-color: black;
+}
+.menu_footer>p{
+  color: white;
+}
+
+a{
+  color: inherit;
+  text-decoration: none;
+}
+
+.menu_footer{
+  color:black;
+}
+ul{
+  font-size: 25px;
+}
+ul ul {
+  font-size: 18px;
+  /*display: none;*/
+}
+#gnb>li::after{
+  margin-left: 50px;
+  content: url(images/icon_gnb_arr.png);
+}
+.main_design, #select_lang{
+  background-color: lightgreen;
+}
+
+video{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: 0;
+  transform: translateX(-50%) translateY(-50%);
+  background-size: cover;
+  transition: 1s opacity;
+}
+
+.lang{
+  position: relative;
+  z-index: 100;
+}
+
+.main_backgrand_1{
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  height: 1700px;
+  z-index: 5;
+  margin-top: -200px;
+  overflow: hidden;
+}
