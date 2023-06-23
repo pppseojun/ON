@@ -157,26 +157,19 @@
   }
   
   .menu_footer{
+    /* margin-left: 40px;
+    margin-top: 290px;
+    margin-bottom: 0; */
     position: absolute;
-    display: inline-block;
-    bottom: 10px;
+    bottom: 91px;
     left: 0;
     right: 0;
     overflow: hidden;
     color: #fff;
-    margin-left: 45px;
-    margin-right: 75px;
   }
 
-  #menu_footer_social{
-    width: 60%;
-    border-right: 1px solid white; 
+  #menu_footer_social, #menu_footer_shopping{
     
-    /* margin-right: 150px; */
-  }
-
-  #menu_footer_shopping{
-    /* width: 40%; */
   }
   
   ul{
@@ -210,6 +203,36 @@
     position: relative;
     z-index: 100;
   }
+
+  video{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 0;
+    transform: translateX(-50%) translateY(-50%);
+    background-size: cover;
+    transition: 1s opacity;
+  }
+  
+  .lang{
+    position: relative;
+    z-index: 100;
+  }
+  
+  .main_backgrand_1{
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    height: 1700px;
+    z-index: 5;
+    margin-top: -200px;
+    overflow: hidden;
+  }
+
   
   footer {
     z-index: 99999;
