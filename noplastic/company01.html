@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="page1.css">
+    <link rel="stylesheet" type="text/css" href="company01.css">
 </head>
 <body>
     <header>
@@ -29,29 +29,36 @@
             <div class="menu">
               <div style="width: 500px;">
                 <ul id="gnb">
-                    <ul id="topMenu">
-                      <li><a href="#">단체 여행 <span>▼</span></a>
-                        <ul>
-                          <li><a href="#">회사 연수</a></li>
-                          <li><a href="#">수학 여행</a></li>
-                        </ul>
-                      </li>
-                      <li><a href="#">맞춤 여행  <span>▼</span></a>
-                        <ul>
-                          <li><a href="#">4.3 평화 기행</a></li>
-                          <li><a href="#">곶자왈 체험</a></li>
-                          <li><a href="#">힐링 워크샵</a></li>
-                        </ul>
-                      </li>
-                     
-                      <li><a href="#">맞춤 여행  <span>▼</span></a>
-                        <ul>
-                          <li><a href="#">4.3 평화 기행</a></li>
-                          <li><a href="#">곶자왈 체험</a></li>
-                          <li><a href="#">힐링 워크샵</a></li>
-                        </ul>
-                      </li>
-                    </ul>
+                  <li class="menu_item" onclick="toggleSubMenu(this)">Company<hr></li>
+                  <ul class="sub_menu">
+                    <li><a href="#">회사소개</a></li>
+                    <li><a href="#">회사 연혁</a></li>
+                    <li><a href="#">협력 업체</a></li>
+                    <li><a href="#">오시는 길</a></li>
+                  </ul>
+                  <li class="menu_item" onclick="toggleSubMenu(this)">Products<hr></li>
+                  <ul class="sub_menu">
+                    <li><a href="#">친환경 제품 1</a></li>
+                    <li><a href="#">친환경 제품 2</a></li>
+                    <li><a href="#">친환경 제품 3</a></li>
+                  </ul>
+                  <li class="menu_item" onclick="toggleSubMenu(this)">Technology<hr></li>
+                  <ul class="sub_menu">
+                    <li><a href="#">기술</a></li>
+                    <li><a href="#">특허/인증</a></li>
+                  </ul >
+                  <li class="menu_item" onclick="toggleSubMenu(this)">Media<hr></li>
+                  <ul class="sub_menu">
+                    <li><a href="#">환경뉴스</a></li>
+                    <li><a href="#">보도자료</a></li>
+                  
+                  </ul>
+                  <li class="menu_item" onclick="toggleSubMenu(this)">Contact<hr></li>
+                  <ul class="sub_menu">
+                    <li><a href="#">공지 사항</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">문의 사항1</a></li>
+                  </ul>
                 </ul>
               </div>
               <br>
@@ -79,16 +86,17 @@
     
       </header>
       <main>
-        
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
+      
         <br>
         
+        <ul class="horizontal-menu">
+						<li><a href="/company01">회사소개</a></li>
+						<li><a href="/company02">회사연혁</a></li>
+						<li><a href="/company03">협력업체</a></li>
+						<li><a href="/company04">CI / BI</a></li>
+						<li><a href="/company05">오시는길</a></li>
+					</ul>
+				
         <br>
         <br>
         <div class="ctitle type02">
