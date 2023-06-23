@@ -56,7 +56,7 @@ select {
   height: 100%;
   max-width: 0;
   transition: 0.5s ease;
-  z-index: 2222;
+  z-index: 1;
   background-color: #eee;
 }
 
