@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>No Plastic</title>
-  <link rel="stylesheet" type="text/css" href="main_page_style.css">
+  <link rel="stylesheet" type="text/css" href="index.css">
 </head>
 <body>
   <header id="header">
@@ -18,7 +18,7 @@
       </select>
 
       <h1>
-        <a href="/">
+        <a href="#">
           <div class="logo">
             <img src="images/tlogo.png" alt="logo">
           </div>
@@ -31,36 +31,34 @@
       <div class="menu">
           <div class="div_gnb">
             <ul id="gnb">
-              <li id="com"> <a href="#">Company</a><hr></li>
-              <ul id="sub_menu">
+              <li class="menu_item" onclick="toggleSubMenu(this)"><h3>Company</h3><hr></li>
+              <ul class="sub_menu">
                 <li><a href="#">회사소개</a></li>
                 <li><a href="#">회사 연혁</a></li>
                 <li><a href="#">협력 업체</a></li>
                 <li><a href="#">오시는 길</a></li>
-                <hr>
               </ul>
-              <li id="com"><a href="#">Products</a><hr></li>
-              <ul id="sub_menu">
+              <li class="menu_item" onclick="toggleSubMenu(this)"><h3>Products</h3><hr></li>
+              <ul class="sub_menu">
                 <li><a href="#">친환경 제품 1</a></li>
                 <li><a href="#">친환경 제품 2</a></li>
                 <li><a href="#">친환경 제품 3</a></li>
-                <hr>
+           
               </ul>
-              <li  id="com"><a href="#">Technology</a><hr></li>
-              <ul id="sub_menu">
+              <li class="menu_item" onclick="toggleSubMenu(this)"><h3>Technology</h3><hr></li>
+              <ul class="sub_menu">
                 <li><a href="#">기술</a></li>
                 <li><a href="#">특허/인증</a></li>
-                <hr>
+               
               </ul >
-              <li  id="com"><a href="#">Media</a><hr></li>
-
-              <ul id="sub_menu">
+              <li class="menu_item" onclick="toggleSubMenu(this)"><h3>Media</h3><hr></li>
+              <ul class="sub_menu">
                 <li><a href="#">환경뉴스</a></li>
                 <li><a href="#">보도자료</a></li>
-                <hr>
+              
               </ul>
-              <li  id="com"><a href="#">Contact</a><hr></li>
-              <ul id="sub_menu">
+              <li class="menu_item" onclick="toggleSubMenu(this)"><h3>Contact</h3><hr></li>
+              <ul class="sub_menu">
                 <li><a href="#">공지 사항</a></li>
                 <li><a href="#">FAQ</a></li>
                 <li><a href="#">문의 사항1</a></li>
@@ -69,17 +67,17 @@
          </div>
       <div>
         <div class ="menu_footer">
-          <div id="menu_footer_social" style="border-right: 1px solid white; margin-right: 30px;">
+          <div id="menu_footer_social">
             <p>social</p>
-            <img src="https://www.greenwhaleglobal.com/asset/images/common/icon_nshopping.png" alt="네이버">
-            <img src="https://www.greenwhaleglobal.com/asset/images/common/icon_nshopping.png" alt="네이버">
-            <img src="https://www.greenwhaleglobal.com/asset/images/common/icon_nshopping.png" alt="네이버">
-            <img src="https://www.greenwhaleglobal.com/asset/images/common/icon_nshopping.png" alt="네이버">
+            <a href="https://blog.naver.com/greenwhaleglobal" target="_blank" ><img src="https://www.greenwhaleglobal.com/asset/images/common/icon_blog.png" alt="블로그"></a>
+            <a href="https://www.instagram.com/greenwhaleglobal/" target="_blank" ><img src="https://www.greenwhaleglobal.com/asset/images/common/icon_insta.png" alt="인스타"></a>
+            <a href="https://www.facebook.com/GREENWHALEglobal-2217764281604993/?modal=admin_todo_tour" target="_blank" ><img src="https://www.greenwhaleglobal.com/asset/images/common/icon_facebook.png" alt="페이스북"></a>
+            <a href="https://www.youtube.com/channel/UCRYxerlM2kXTZXM_g8B_TBQ" target="_blank" ><img src="https://www.greenwhaleglobal.com/asset/images/common/icon_youtube.png" alt="유튜브"></a>
           </div>
           <div id="menu_footer_shopping">
             <p>shopping mall</p>
-            <img src="https://www.greenwhaleglobal.com/asset/images/common/icon_nshopping.png" alt="네이버">
-            <img src="https://www.greenwhaleglobal.com/asset/images/common/icon_nshopping.png" alt="네이버">
+            <a href="https://smartstore.naver.com/greenwhaleglobal" target="_blank" ><img src="https://www.greenwhaleglobal.com/asset/images/common/icon_nshopping.png" alt="네이버쇼핑"></a>
+            <a href="https://store.coupang.com/vp/vendors/A00765342/products?productId=&vendorName=&outboundShippingPlaceId=12731337" target="_blank" ><img src="https://www.greenwhaleglobal.com/asset/images/common/icon_coupang.png" alt="쿠팡"></a>
           </div>
         </div>
       </div>
@@ -92,7 +90,17 @@
       <source src="videos/video2.mp4" type="video/mp4">
     </video>
     <div class="main_backgrand_1">
-      <img src="images/main_bg.png" alt="main_backgrand" class="main_wave">
+      <div class="main_tit">
+        <span class="green_text_bold">친환경 경제 성장을</span>
+        <br>
+        <span class="text_bold">선도하는</span>
+        <span>No Plastic</span>
+      </div>
+      <div class="content01">
+          노플라스틱은 바이오 생분해성 기술로 지속가능한 환경을 만들며, 경제 성장 동력으로<br>  
+          근간을 이룰 친환경 제품 연구에 매진하고 있습니다. 친환경 소재 산업으로 지구 환경<br>
+          보호에 선두가 되는 기업으로 거듭나겠습니다.
+      </div>
     </div>
 
 
@@ -107,7 +115,7 @@
       Tel: / Fax: / E-Mail:<br>
       Copyrights &copy; 2023 All Rights Reserved by 5N Co.,Ltd.</div>
     <a href="javascript:" id="scroll-to-top">
-        <img src="images/gotop.png" alt="Scroll to Top">
+        <img src="https://www.greenwhaleglobal.com/asset/images/common/gotop.png" alt="Scroll to Top">
     </a>
   </footer>
   <script src="script.js"></script>
