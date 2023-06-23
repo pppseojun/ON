@@ -19,214 +19,274 @@ header{
 .flex-container {
   display: flex;
 }
+#header .logo{
+    left: 25px;
+    position: absolute;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  #header>.logo>a{
+    background: url(images/tlogo.png) no-repeat center top;
+  }
+  
+ #headertext{
+  margin-top: 100px;
+ } 
 
-/* 구글 번역 */
-.lang{
-  display: inline-block;
-  position: absolute;
-  z-index: 2;
-  padding: 8px 0;
-  top: 40px;
-  right: 190px;
-  user-select: none;
-  width: auto;
-  margin: 0;
-  scale: 1.8;
-}
-.lang-option {
-  padding-left: 20px; /* 이미지와 텍스트 간의 여백을 설정하기 위한 패딩 값 */
-  background-repeat: no-repeat;
-  background-position: left center; /* 이미지를 왼쪽 정렬하고 세로 중앙 정렬 */
-}
-.option-english {
-  background-image: url("https://www.greenwhaleglobal.com/asset/images/common/tlogo.png");
-}
-select {
-  background-color: gray;
-}
-/* 로고 */
-#logo{
-  text-align: left;
-}
-
-.menu {
-  position: fixed;
-  top: 0;
-  right: 0;
-  height: 100%;
-  max-width: 0;
-  transition: 0.5s ease;
-  z-index: 1;
-  background-color: #eee;
-}
-
-.burger-icon {
-  cursor: pointer;
-  display: inline-block;
-  position: fixed;
-  z-index: 2;
-  padding: 8px 0;
-  top: 40px;
-  right: 60px;
-  user-select: none;
-  width: auto;
-  margin: 0;
-}
-
-.burger-icon .burger-sticks {
-  background: green;
-  display: block;
-  height: 8px;
-  position: relative;
-  transition: background .2s ease-out;
-  width: 50px;
-}
-
-.burger-icon .burger-sticks:before,
-.burger-icon .burger-sticks:after {
-  background: green;
-  content: '';
-  display: block;
-  height: 100%;
-  position: absolute;
-  transition: all .2s ease-out;
-  width: 100%;
-}
-
-.burger-icon .burger-sticks:before {
-  top: 20px;
-}
-
-.burger-icon .burger-sticks:after {
-  top: -20px;
-}
-
-.burger-check {
-  display: none;
-}
-
-.burger-check:checked~.menu {
-  max-width: 600px;
-}
-
-.burger-check:checked~.burger-icon .burger-sticks {
-  background: transparent;
-}
-
-.burger-check:checked~.burger-icon .burger-sticks:before {
-  transform: rotate(-45deg);
-}
-
-.burger-check:checked~.burger-icon .burger-sticks:after {
-  transform: rotate(45deg);
-}
-
-.burger-check:checked~.burger-icon:not(.steps) .burger-sticks:before,
-.burger-check:checked~.burger-icon:not(.steps) .burger-sticks:after {
-  top: 0;
-}
-
-/* 메뉴 css */
-.menu>ul, li{
-  list-style-type: none;
-  color: white;
-}
-
-/* 투명하게 */
-.menu{
-  background-color: rgba(0, 0, 0, 0.7);
-}
-.menu_footer>p{
-  color: white;
-}
-
-a{
-  color: inherit;
-  text-decoration: none;
-}
-
-.menu_footer{
-  color:black;
-}
-.sub_menu{
-  display: none;
-}
-
-ul{
-  font-size: 25px;
-}
-ul ul {
-  font-size: 18px;
-  margin-right: 250px;
-  /*display: none;*/
-}
-#gnb>li::after{
-  float: right;
-  margin-right: 150px;
-  margin-left: 50px;
-  content: url("https://www.greenwhaleglobal.com/asset/images/common/icon_gnb_arr.png");
-}
+  
+  select {
+    background-color: #000000;
+    border: 0;
+    margin-right: 50px;
+    padding-left: 12px;
+    padding-right: 10px;
+    margin-left: -10px;
+    height: 27px;
+  }
+  #select_lang{
+    float: right;
+    margin-top: 50px;
+    margin-right: 230px;
+  }
+  
+  #select_lang>select::before{
+    position: absolute;
+    z-index: 1000;
+    src: url(https://www.greenwhaleglobal.com/asset/images/common/icon_nshopping.png);
+  }
+  
+  #select_lang>select{
+    color: white;
+    position: absolute;
+    /* margin-left: 1000px; */
+  }
+  
 
 
-main{
-  background-color: rgb(170, 166, 166);
-  padding: 20px;
-  width: 100%;
-  box-sizing: border-box;
-  text-align: center;
-  margin-top: auto;
-}
 
-/* 가로로 배치하는 코드 *****************************************/
-.horizontal-menu {
-  display: flex;
-  list-style-type: none;
-  padding: 0;
-  justify-content: center;
-}
 
-.horizontal-menu li {
-  margin-right: 20px;
-}
 
-.horizontal-menu li:last-child {
-  margin-right: 0;
-}
+  /* 햄버거 아이콘 메뉴******************************************************************************** */
+  .burger-icon {
+    cursor: pointer;
+    display: inline-block;
+    position: fixed;
+    z-index: 100;
+    padding: 20px;
+    top: 60px;
+    right: 60px;
+    height: 27px;
+    user-select: none;
+    width: 35px;
+    margin: 0;
+  }
+  
+  .burger-icon .burger-sticks {
+    background: white;
+    display: block;
+    height: 3px;
+    position: relative;
+    transition: background .2s ease-out;
+    width: 35px;
+    z-index: 100;
+  }
+  
+  .burger-icon .burger-sticks:before,
+  .burger-icon .burger-sticks:after {
+    background: white;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+  }
+  
+  .burger-icon .burger-sticks:before {
+    top: 10px;
+  }
+  
+  .burger-icon .burger-sticks:after {
+    top: -10px;
+  }
+  
+  .burger-check {
+    display: none;
+  }
+  
+  .burger-check:checked~.menu {
+    max-width: 800px;
+  }
+  
+  .burger-check:checked~.burger-icon .burger-sticks {
+    background: transparent;
+  }
+  
+  .burger-check:checked~.burger-icon .burger-sticks:before {
+    transform: rotate(-45deg);
+  }
+  
+  .burger-check:checked~.burger-icon .burger-sticks:after {
+    transform: rotate(45deg);
+  }
+  
+  .burger-check:checked~.burger-icon:not(.steps) .burger-sticks:before,
+  .burger-check:checked~.burger-icon:not(.steps) .burger-sticks:after {
+    top: 0;
+  }
+/* ********************************************************************************* */
+
+
+
+  #scroll-to-top {
+    border-radius: 50% 50%;
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    padding: 10px;
+    background-color: rgba(33, 33, 33, 0.8);
+    background-position: center center;
+    color: #fff;
+    cursor: pointer;
+  }
+  #scroll-to-top img {
+    width: 20px; /* Adjust the width to your desired size */
+    height: auto; /* Automatically adjust the height based on the width */
+  }
+
+
+
+  /* 여기서부터 메뉴 *****************************************************/
+  .menu>ul, li{
+    cursor: pointer;
+    list-style-type: none;
+    color: white;
+  }
+  .menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    max-width: 0;
+    transition: 0.5s ease;
+    background-color: rgba(0,0,0,0.8);
+    z-index: 50;}
+
+  .div_gnb{
+    padding-top: 80px;
+    width: 80%;
+  }
+  .menu_footer>p{
+    color: white;
+  }
+  a{
+    color: inherit;
+    text-decoration: none;
+  }
+  .menu_footer{
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    color: #fff;
+    margin-left: 40px;
+    margin-right: 20px;
+  }
+  #menu_footer_social{
+    /* border-right: 1px solid white; 
+    margin-right: 30px; */
+    width: 50%;
+  }
+  #menu_footer_shopping{
+    width: 40%;
+  }
+  ul{
+    font-size: 25px;
+  }
+  ul ul {
+    font-size: 18px;
+  }
+  .sub_menu{
+    display: none;
+  }
+  #gnb{
+    margin-right: 180px;
+  }
+  #gnb>li{
+    width: 380px;
+  }
+  #gnb>li>h3::after{
+    float: right;
+    margin-right: 15px;
+    content: url(images/icon_gnb_arr.png);
+  }
+  #gnb>li>h3{
+    margin-bottom: 0px;
+  }
+/* *******************************************************************8 */
+
+
+  .main_design, #select_lang{
+    background-color: lightgreen;
+  }
+
+
+
+  .lang{
+    position: relative;
+    z-index: 100;
+  }
+  main{
+    background-color: rgb(170, 166, 166);
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    margin-top: auto;
+  }
+ 
+ 
+  /* 가로로 배치하는 코드 *****************************************/
+  .horizontal-menu {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    justify-content: center;
+  }
+  
+  .horizontal-menu li {
+    margin-right: 50px;
+  }
+  
+  .horizontal-menu li:last-child {
+    margin-right: 0;
+  }
 /* ************************************************************** */
 
-content{
-
-  padding: 20px;
-  width: 100%;
-  box-sizing: border-box;
-  text-align: center;
-  margin-top: auto;
-}
 
 
-footer {
-  background-color: #333;
-  color: gray;
-  padding: 20px;
-  width: 100%;
-  box-sizing: border-box;
-  text-align: center;
-  margin-top: auto;
-}
-.sns img:hover {
-  transform: scale(1.2);
-}
-#scroll-to-top {
-  display: none;
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  padding: 10px;
-  background-color: #333;
-  color: #fff;
-  cursor: pointer;
-}
-#scroll-to-top img {
-  width: 20px; /* Adjust the width to your desired size */
-  height: auto; /* Automatically adjust the height based on the width */
-}
+  content{
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    margin-top: auto;
+  }
+  
+  footer {
+    z-index: 9;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    margin-top: 500px;
+    margin-bottom: 0;
+  }
+  .sns img:hover {
+    transform: scale(1.2);
+  }
