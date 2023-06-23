@@ -32,3 +32,13 @@ function translateText() {
     }
   });
 }
+
+// Company이것을 클릭하면 sub_menu가 보이고 다시 Company클릭하면 숨겨지게 코드
+function toggleSubMenu(menuItem) {
+  var subMenu = menuItem.nextElementSibling;
+  if (subMenu.style.display === "none" || subMenu.style.display === "") {
+    subMenu.style.display = "block";
+  } else {
+    subMenu.style.display = "none";
+  }
+}
