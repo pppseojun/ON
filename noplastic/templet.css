@@ -94,7 +94,7 @@
   }
   
   .burger-check:checked~.menu {
-    max-width: 500px;
+    max-width: 800px;
   }
   
   .burger-check:checked~.burger-icon .burger-sticks {
@@ -132,6 +132,7 @@
 
   /* 여기서부터 메뉴 *****************************************************/
   .menu>ul, li{
+    cursor: pointer;
     list-style-type: none;
     color: white;
   }
@@ -146,7 +147,7 @@
     z-index: 50;}
 
   .div_gnb{
-    padding-top: 100px;
+    padding-top: 80px;
     width: 80%;
   }
   .menu_footer>p{
@@ -159,17 +160,23 @@
   }
   
   .menu_footer{
-    /* margin-left: 40px;
-    margin-top: 290px;
-    margin-bottom: 0; */
     position: absolute;
-    bottom: 91px;
+    bottom: 10px;
     left: 0;
     right: 0;
     overflow: hidden;
     color: #fff;
+    margin-left: 40px;
+    margin-right: 20px;
   }
-
+  #menu_footer_social{
+    /* border-right: 1px solid white; 
+    margin-right: 30px; */
+    width: 50%;
+  }
+  #menu_footer_shopping{
+    width: 40%;
+  }
   
   
   ul{
@@ -191,10 +198,13 @@
     width: 380px;
   }
   
-  #gnb>li>a::after{
+  #gnb>li>h3::after{
     float: right;
     margin-right: 15px;
     content: url(images/icon_gnb_arr.png);
+  }
+  #gnb>li>h3{
+    margin-bottom: 0px;
   }
 /* *******************************************************************8 */
 
